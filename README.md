@@ -1,6 +1,6 @@
 # School Website
 
-A modern, responsive school website built with React, Node.js, Express, and PostgreSQL.
+A modern, responsive school website built with React, Node.js, Express, and PostgreSQL/SQLite.
 
 ## Features
 
@@ -10,6 +10,67 @@ A modern, responsive school website built with React, Node.js, Express, and Post
 - **Staff Directory**: Display faculty and staff with their details and achievements
 - **Alumni Section**: Feature successful graduates with their testimonials
 - **Authentication System**: Secure admin access for content management
+
+## Setup Instructions
+
+### Prerequisites
+
+- Node.js (v14+)
+- npm or yarn
+
+### Database Options
+
+This application supports both PostgreSQL and SQLite:
+
+- **PostgreSQL**: For production environments
+- **SQLite**: For development/testing (no additional setup required)
+
+### Installation
+
+1. Clone the repository
+   ```
+   git clone https://github.com/M-Sameer-Khan/School-Website.git
+   cd School-Website
+   ```
+
+2. Install dependencies
+   ```
+   npm install         # Server dependencies
+   npm run install-client  # Client dependencies
+   ```
+
+3. Configure environment
+   - Create a `.env` file in the root directory with the following variables:
+     ```
+     PORT=5003                # Server port
+     USE_SQLITE=true          # Use SQLite instead of PostgreSQL
+     NODE_ENV=development
+     JWT_SECRET=your_secret_key
+     ```
+   - Create a `.env` file in the client directory:
+     ```
+     PORT=3002
+     REACT_APP_API_URL=http://localhost:5003/api
+     ```
+
+4. Start the development server
+   ```
+   npm run dev         # Runs both client and server concurrently
+   ```
+
+5. Access the application
+   - Frontend: http://localhost:3002
+   - Backend API: http://localhost:5003/api
+
+## Project Structure
+
+- `/client`: React frontend application
+- `/server`: Node.js/Express backend
+  - `/config`: Database and server configuration
+  - `/controllers`: API controllers
+  - `/models`: Database models
+  - `/routes`: API routes
+  - `/middleware`: Custom middleware
 - **Local Image Storage**: Optimized image uploads with automatic processing
 
 ## Tech Stack
