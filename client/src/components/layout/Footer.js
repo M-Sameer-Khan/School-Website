@@ -10,13 +10,14 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {/* School Information */}
           <div>
-            <h3 className="text-xl font-bold mb-4">School Name</h3>
-            <p className="mb-4 text-gray-300">Providing quality education since [YEAR]</p>
+            <h3 className="text-xl font-bold mb-4">THE YES SCHOOLING SYSTEM</h3>
+            <p className="mb-4 text-gray-300">Providing quality education</p>
             <address className="not-italic text-gray-300">
-              <p>123 School Street</p>
-              <p>City, State 12345</p>
-              <p>Phone: (123) 456-7890</p>
-              <p>Email: info@schoolname.edu</p>
+              <p>Plot # D-2, Kaaj Muhammad Goth, Liyari,</p>
+              <p>Taiser Town, Karachi</p>
+              <p>Phone: 0314-2315538, 0311-8410539</p>
+              <p>Email: theyesschoolingsystem@gmail.com</p>
+              <p>Office Hours: 8:00 am to 9:00 pm</p>
             </address>
           </div>
 
@@ -108,7 +109,7 @@ const Footer = () => {
         {/* Bottom Footer */}
         <div className="mt-12 pt-8 border-t border-secondary-700 text-center">
           <p className="text-gray-400">
-            &copy; {currentYear} School Name. All rights reserved.
+            &copy; {currentYear} THE YES SCHOOLING SYSTEM. All rights reserved.
           </p>
           <div className="mt-2 flex justify-center space-x-4 text-sm text-gray-400">
             <Link to="/privacy" className="hover:text-white transition-colors duration-300">
