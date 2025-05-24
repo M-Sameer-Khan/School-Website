@@ -45,7 +45,8 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
-            <span className="text-2xl font-bold text-primary-700">School Name</span>
+            <img src="/school-logo.png" alt="THE YES SCHOOLING SYSTEM" className="h-12" />
+            <span className="text-xl font-bold text-primary-700">THE YES SCHOOLING SYSTEM</span>
           </Link>
 
           {/* Desktop Menu */}

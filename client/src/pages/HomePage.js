@@ -4,35 +4,28 @@ import { Link } from 'react-router-dom';
 const HomePage = () => {
   return (
     <div className="fade-in">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-primary-700 to-primary-900 text-white py-24 mb-12 rounded-lg overflow-hidden">
-        <div className="absolute inset-0 bg-black opacity-20"></div>
-        <div className="relative container mx-auto px-4 z-10">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Welcome to Our School
-            </h1>
-            <p className="text-xl md:text-2xl mb-8">
-              Providing excellence in education since [YEAR]
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Link 
-                to="/about" 
-                className="px-6 py-3 bg-white text-primary-700 font-semibold rounded-lg hover:bg-gray-100 transition-colors duration-300"
-              >
+      {/* Hero Section with Gray Background */}
+      <div className="relative mb-12" style={{
+        backgroundColor: '#808080', /* Gray background */
+        borderRadius: '0px',
+        overflow: 'hidden',
+        minHeight: '400px'
+      }}>
+        <div className="flex items-center justify-center h-full py-16">
+          <div className="text-center p-6 max-w-lg">
+            <h1 className="text-4xl font-bold mb-4 text-black">Welcome to THE YES SCHOOLING SYSTEM</h1>
+            <p className="text-xl mb-8 text-black">Providing excellence in education since 2022</p>
+            <div className="flex justify-center gap-4">
+              <Link to="/about" className="px-6 py-3 bg-white text-black font-medium rounded hover:bg-gray-100 transition-colors">
                 Learn More
               </Link>
-              <Link 
-                to="/contact" 
-                className="px-6 py-3 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:bg-opacity-10 transition-colors duration-300"
-              >
+              <Link to="/contact" className="px-6 py-3 border border-gray-500 text-white font-medium rounded hover:bg-white hover:text-black transition-colors">
                 Contact Us
               </Link>
             </div>
           </div>
         </div>
-        <div className="absolute bottom-0 left-0 w-full h-16 bg-white opacity-10 transform -skew-y-3 translate-y-8"></div>
-      </section>
+      </div>
 
       {/* Features Section */}
       <section className="py-12">

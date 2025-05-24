@@ -10,13 +10,27 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {/* School Information */}
           <div>
-            <h3 className="text-xl font-bold mb-4">School Name</h3>
-            <p className="mb-4 text-gray-300">Providing quality education since [YEAR]</p>
+            <h3 className="text-xl font-bold mb-4">THE YES SCHOOLING SYSTEM</h3>
+            <p className="mb-4 text-gray-300">Providing quality education since 2022</p>
             <address className="not-italic text-gray-300">
-              <p>123 School Street</p>
-              <p>City, State 12345</p>
-              <p>Phone: (123) 456-7890</p>
-              <p>Email: info@schoolname.edu</p>
+              <p>Plot # D-2, Kaaj Muhammad Goth, Liyari,</p>
+              <p>Taiser Town, Karachi</p>
+              <p>
+                <a 
+                  href="https://g.co/kgs/hw2c2sE" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-primary-400 hover:text-primary-300 transition-colors duration-300 flex items-center"
+                >
+                  <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 0C7.31 0 3.5 3.81 3.5 8.5c0 5.94 7.03 14.29 7.86 15.32c0.38 0.47 1.07 0.54 1.54 0.16c0.06-0.05 0.12-0.1 0.16-0.16C13.89 22.79 20.5 14.44 20.5 8.5C20.5 3.81 16.69 0 12 0zm0 13c-2.48 0-4.5-2.02-4.5-4.5S9.52 4 12 4s4.5 2.02 4.5 4.5S14.48 13 12 13z" />
+                  </svg>
+                  View on Google Maps
+                </a>
+              </p>
+              <p>Phone: 0314-2315538, 0311-8410539</p>
+              <p>Email: theyesschoolingsystem@gmail.com</p>
+              <p>Office Hours: 8:00 am to 9:00 pm</p>
             </address>
           </div>
 
@@ -108,7 +122,7 @@ const Footer = () => {
         {/* Bottom Footer */}
         <div className="mt-12 pt-8 border-t border-secondary-700 text-center">
           <p className="text-gray-400">
-            &copy; {currentYear} School Name. All rights reserved.
+            &copy; {currentYear} THE YES SCHOOLING SYSTEM. All rights reserved.
           </p>
           <div className="mt-2 flex justify-center space-x-4 text-sm text-gray-400">
             <Link to="/privacy" className="hover:text-white transition-colors duration-300">

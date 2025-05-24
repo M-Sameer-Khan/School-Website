@@ -15,6 +15,15 @@ const GalleryPage = () => {
       const sampleGalleries = [
         {
           id: 1,
+          title: 'School Life',
+          slug: 'school-life',
+          description: 'Scenes from daily life, events, and celebrations at THE YES SCHOOLING SYSTEM.',
+          coverImage: '/images/gallery/1688665679307.jpg',
+          eventDate: '2025-05-22',
+          imageCount: 21
+        },
+        {
+          id: 2,
           title: 'Annual Day Celebration',
           slug: 'annual-day-2025',
           description: 'Highlights from our Annual Day celebrations with performances and awards.',
@@ -23,7 +32,7 @@ const GalleryPage = () => {
           imageCount: 24
         },
         {
-          id: 2,
+          id: 3,
           title: 'Sports Day',
           slug: 'sports-day-2025',
           description: 'Students participating in various sports activities and competitions.',
@@ -32,7 +41,7 @@ const GalleryPage = () => {
           imageCount: 36
         },
         {
-          id: 3,
+          id: 4,
           title: 'Science Exhibition',
           slug: 'science-exhibition-2025',
           description: 'Student projects and innovations at our annual science exhibition.',
@@ -41,7 +50,7 @@ const GalleryPage = () => {
           imageCount: 18
         },
         {
-          id: 4,
+          id: 5,
           title: 'Independence Day',
           slug: 'independence-day-2024',
           description: 'Celebration of Pakistan Independence Day with cultural performances.',

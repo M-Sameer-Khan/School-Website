@@ -54,7 +54,7 @@ const AboutPage = () => {
                   <div className="flex flex-col md:flex-row items-center">
                     <div className="md:w-1/2 md:pr-8 md:text-right order-1 md:order-1">
                       <div className="bg-white p-6 rounded-lg shadow-md">
-                        <h3 className="text-xl font-bold mb-2 text-primary-700">[FOUNDING YEAR]</h3>
+                        <h3 className="text-xl font-bold mb-2 text-primary-700">2022</h3>
                         <p className="text-gray-600">
                           Our school was founded with a vision to provide quality education that balances academic excellence with character development.
                         </p>
@@ -70,9 +70,9 @@ const AboutPage = () => {
                   <div className="flex flex-col md:flex-row items-center">
                     <div className="md:w-1/2 md:pr-8 order-1 md:order-0"></div>
                     <div className="mx-auto md:mx-0 h-8 w-8 rounded-full bg-primary-500 border-4 border-white flex items-center justify-center shadow-md order-0 md:order-1 my-4 md:my-0"></div>
-                    <div className="md:w-1/2 md:pl-8 md:text-left order-2 md:order-2">
+                    <div className="md:w-1/2 md:pl-8 order-2 md:order-2">
                       <div className="bg-white p-6 rounded-lg shadow-md">
-                        <h3 className="text-xl font-bold mb-2 text-primary-700">[MILESTONE YEAR]</h3>
+                        <h3 className="text-xl font-bold mb-2 text-primary-700">2023</h3>
                         <p className="text-gray-600">
                           The school expanded its facilities and introduced innovative teaching methodologies, setting new standards for educational excellence in the region.
                         </p>
@@ -86,9 +86,9 @@ const AboutPage = () => {
                   <div className="flex flex-col md:flex-row items-center">
                     <div className="md:w-1/2 md:pr-8 md:text-right order-1 md:order-1">
                       <div className="bg-white p-6 rounded-lg shadow-md">
-                        <h3 className="text-xl font-bold mb-2 text-primary-700">[MILESTONE YEAR]</h3>
+                        <h3 className="text-xl font-bold mb-2 text-primary-700">2024</h3>
                         <p className="text-gray-600">
-                          Our school achieved national recognition for academic excellence and was awarded for its outstanding contributions to education.
+                          Our school expanded our curriculum offerings and enrichment programs, enhancing the learning experience for our students.
                         </p>
                       </div>
                     </div>

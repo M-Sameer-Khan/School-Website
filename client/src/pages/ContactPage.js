@@ -107,12 +107,19 @@ const ContactPage = () => {
               </div>
             </div>
 
-            {/* Google Maps Embed (placeholder) */}
-            <div className="mt-8 rounded-lg overflow-hidden h-64 bg-gray-200 flex items-center justify-center">
-              <div className="text-gray-500 text-center p-4">
-                <p>Google Maps Integration Placeholder</p>
-                <p className="text-sm mt-2">Interactive map showing our school location will appear here</p>
-              </div>
+            {/* Google Maps Embed */}
+            <div className="rounded-md h-64 mt-6 overflow-hidden border border-gray-300">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3616.290063440467!2d67.02754797527945!3d24.991684041903723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb340e39295f097%3A0x7f14fb82c71b8b94!2sTHE%20YES%20SCHOOLING%20SYSTEM!5e0!3m2!1sen!2s!4v1716367940652!5m2!1sen!2s" 
+                width="100%" 
+                height="100%" 
+                style={{ border: 0 }} 
+                allowFullScreen="" 
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade"
+                title="THE YES SCHOOLING SYSTEM Location"
+                aria-label="Google Maps showing THE YES SCHOOLING SYSTEM location"
+              ></iframe>
             </div>
           </div>
         </Card>

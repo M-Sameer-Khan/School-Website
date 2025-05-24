@@ -16,8 +16,136 @@ const GalleryDetailPage = () => {
     setTimeout(() => {
       // Sample gallery data based on slug
       const galleryData = {
-        'annual-day-2025': {
+        'school-life': {
           id: 1,
+          title: 'School Life',
+          description: 'Scenes from daily life, events, and celebrations at THE YES SCHOOLING SYSTEM.',
+          eventDate: '2025-05-22',
+          images: [
+            {
+              id: 1,
+              src: '/images/gallery/1688665679307.jpg',
+              alt: 'School assembly with students lined up',
+              caption: 'Morning assembly at THE YES SCHOOLING SYSTEM'
+            },
+            {
+              id: 2,
+              src: '/images/gallery/1688665684487.jpg',
+              alt: 'School students in uniform',
+              caption: 'Students in their school uniforms'
+            },
+            {
+              id: 3,
+              src: '/images/gallery/1688665705638.jpg',
+              alt: 'School event celebration',
+              caption: 'Special event celebration at the school'
+            },
+            {
+              id: 4,
+              src: '/images/gallery/1688665720896.jpg',
+              alt: 'School gathering',
+              caption: 'Students gathered for a special occasion'
+            },
+            {
+              id: 5,
+              src: '/images/gallery/1688665736894.jpg',
+              alt: 'School celebration event',
+              caption: 'Students celebrating a special day at school'
+            },
+            {
+              id: 6,
+              src: '/images/gallery/1688665750911.jpg',
+              alt: 'School activity',
+              caption: 'Students participating in school activities'
+            },
+            {
+              id: 7,
+              src: '/images/gallery/1688665758959.jpg',
+              alt: 'School event',
+              caption: 'School event with students and teachers'
+            },
+            {
+              id: 8,
+              src: '/images/gallery/1689741496894.jpg',
+              alt: 'School gathering',
+              caption: 'Students gathered for a special occasion'
+            },
+            {
+              id: 9,
+              src: '/images/gallery/1689741504525.jpg',
+              alt: 'School activity',
+              caption: 'Students participating in educational activities'
+            },
+            {
+              id: 10,
+              src: '/images/gallery/1689741540504.jpg',
+              alt: 'School event',
+              caption: 'Special event at THE YES SCHOOLING SYSTEM'
+            },
+            {
+              id: 11,
+              src: '/images/gallery/1689741569944.jpg',
+              alt: 'School celebration',
+              caption: 'Students celebrating at school'
+            },
+            {
+              id: 12,
+              src: '/images/gallery/IMG_20240830_094645.jpg',
+              alt: 'School event August 2024',
+              caption: 'Special event in August 2024'
+            },
+            {
+              id: 13,
+              src: '/images/gallery/IMG-20240830-WA0056.jpg',
+              alt: 'School gathering August 2024',
+              caption: 'School gathering in August 2024'
+            },
+            {
+              id: 14,
+              src: '/images/gallery/IMG-20241011-WA0009.jpg',
+              alt: 'School event October 2024',
+              caption: 'Special event in October 2024'
+            },
+            {
+              id: 15,
+              src: '/images/gallery/IMG_0120.JPG',
+              alt: 'School photo',
+              caption: 'Students at THE YES SCHOOLING SYSTEM'
+            },
+            {
+              id: 16,
+              src: '/images/gallery/IMG-20250118-WA0021.jpg',
+              alt: 'School event January 2025',
+              caption: 'School celebration in January 2025'
+            },
+            {
+              id: 17,
+              src: '/images/gallery/IMG-20250118-WA0030.jpg',
+              alt: 'School gathering January 2025',
+              caption: 'School gathering in January 2025'
+            },
+            {
+              id: 18,
+              src: '/images/gallery/IMG-20250118-WA0033.jpg',
+              alt: 'School activity January 2025',
+              caption: 'School activity in January 2025'
+            },
+            {
+              id: 19,
+              src: '/images/gallery/IMG-20250118-WA0037.jpg',
+              alt: 'School event January 2025',
+              caption: 'Special event in January 2025'
+            },
+            {
+              id: 20,
+              src: '/images/gallery/IMG-20250118-WA0038.jpg',
+              alt: 'School celebration January 2025',
+              caption: 'Celebration in January 2025'
+            }
+          ]
+        },
+        'annual-day-2025': {
+          id: 2,
           title: 'Annual Day Celebration',
           description: 'Highlights from our Annual Day celebrations with performances and awards.',
           eventDate: '2025-03-15',
