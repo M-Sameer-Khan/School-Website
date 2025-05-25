@@ -4,24 +4,37 @@ import { Link } from 'react-router-dom';
 const HomePage = () => {
   return (
     <div className="fade-in">
-      {/* Hero Section with Gray Background */}
+      {/* Hero Section with School Staff Image and Yellow Border */}
       <div className="relative mb-12" style={{
-        backgroundColor: '#808080', /* Gray background */
+        border: '12px solid #FFD700', /* Yellow border */
         borderRadius: '0px',
         overflow: 'hidden',
-        minHeight: '400px'
+        minHeight: '400px',
       }}>
-        <div className="flex items-center justify-center h-full py-16">
+        {/* Background image */}
+        <img 
+          src="/images/school staff.jpg" 
+          alt="School Staff" 
+          className="absolute w-full h-full object-cover z-0"
+        />
+        
+        {/* Semi-transparent overlay to improve text readability */}
+        <div className="absolute w-full h-full z-10" style={{ backgroundColor: 'rgba(0, 0, 0, 0.3)' }}></div>
+        
+        {/* Content */}
+        <div className="relative z-20 flex items-center justify-center h-full py-16">
           <div className="text-center p-6 max-w-lg">
-            <h1 className="text-4xl font-bold mb-4 text-black">Welcome to THE YES SCHOOLING SYSTEM</h1>
-            <p className="text-xl mb-8 text-black">Providing excellence in education since 2022</p>
-            <div className="flex justify-center gap-4">
-              <Link to="/about" className="px-6 py-3 bg-white text-black font-medium rounded hover:bg-gray-100 transition-colors">
-                Learn More
-              </Link>
-              <Link to="/contact" className="px-6 py-3 border border-gray-500 text-white font-medium rounded hover:bg-white hover:text-black transition-colors">
-                Contact Us
-              </Link>
+            <div className="bg-black bg-opacity-50 p-6 rounded-lg">
+              <h1 className="text-4xl font-bold mb-4 text-white">Welcome to THE YES SCHOOLING SYSTEM</h1>
+              <p className="text-xl mb-8 text-white">Providing excellence in education since 2022</p>
+              <div className="flex justify-center gap-4">
+                <Link to="/about" className="px-6 py-3 bg-white text-black font-medium rounded hover:bg-gray-100 transition-colors">
+                  Learn More
+                </Link>
+                <Link to="/contact" className="px-6 py-3 border border-white text-white font-medium rounded hover:bg-white hover:text-black transition-colors">
+                  Contact Us
+                </Link>
+              </div>
             </div>
           </div>
         </div>

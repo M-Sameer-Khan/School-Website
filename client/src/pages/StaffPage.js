@@ -30,7 +30,7 @@ const StaffPage = () => {
           education: 'B.S. in Urdu, Karachi University',
           email: 'principal@theyesschoolingsystem.edu',
           phone: '0314-2315538',
-          image: '/images/staff/Abdul Rehman.jpg'
+          image: '/images/staff/AbdulRehman.jpg'
         },
         {
           id: 2,
@@ -41,7 +41,7 @@ const StaffPage = () => {
           education: 'M.E. in Materials Engineering, NEDuet',
           email: 'viceprincipal@theyesschoolingsystem.edu',
           phone: '0311-8410539',
-          image: '/images/staff/Muhammad Sameer Khan.jpg'
+          image: '/images/staff/MuhammadSameerKhan.jpg'
         },
         {
           id: 3,
