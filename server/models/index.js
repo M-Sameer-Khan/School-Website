@@ -27,6 +27,7 @@ db.departments = require("./department.model.js")(sequelize, Sequelize);
 db.galleries = require("./gallery.model.js")(sequelize, Sequelize);
 db.images = require("./image.model.js")(sequelize, Sequelize);
 db.alumni = require("./alumni.model.js")(sequelize, Sequelize);
+db.feeStructures = require("./fee.model.js")(sequelize, Sequelize);
 
 // Define relationships
 

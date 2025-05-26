@@ -33,6 +33,7 @@ app.use('/api/pages', require('./routes/page.routes'));
 app.use('/api/staff', require('./routes/staff.routes'));
 app.use('/api/gallery', require('./routes/gallery.routes'));
 app.use('/api/alumni', require('./routes/alumni.routes'));
+require('./routes/fee.routes')(app); // Add fee structure routes
 
 // Serve static assets in production
 if (process.env.NODE_ENV === 'production') {
