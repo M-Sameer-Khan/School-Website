@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Helmet } from 'react-helmet-async';
 
 const FeesPage = () => {
   const [feeStructures, setFeeStructures] = useState([]);
@@ -27,10 +26,6 @@ const FeesPage = () => {
 
   return (
     <div className="fade-in">
-      <Helmet>
-        <title>Fee Structure | THE YES SCHOOLING SYSTEM</title>
-        <meta name="description" content="View the fee structure for THE YES SCHOOLING SYSTEM for the current academic year." />
-      </Helmet>
 
       {/* Hero Section */}
       <section className="bg-primary-600 text-white py-16">
