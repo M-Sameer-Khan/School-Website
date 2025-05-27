@@ -9,7 +9,7 @@ const HomePage = () => {
         backgroundImage: "url('/images/school-staff.png')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        border: '12px solid #FFD700', /* Yellow border */
+        border: '12px solid #FFD700', /* Yellow border for THE YES SCHOOLING SYSTEM */
       }}>
         <div className="absolute inset-0 bg-black opacity-40"></div>
         <div className="relative container mx-auto px-4 z-10">
