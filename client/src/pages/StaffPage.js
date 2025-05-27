@@ -23,25 +23,25 @@ const StaffPage = () => {
       const staffData = [
         {
           id: 1,
-          name: 'Mr. Khalid Ahmed',
+          name: 'Abdul Rehman',
           position: 'Principal',
           department: 'administration',
-          bio: 'Mr. Khalid has over 20 years of experience in education leadership and holds a Masters degree in Education.',
-          education: 'M.Ed., University of Karachi',
+          bio: 'Abdul Rehman is an experienced educator with a strong foundation in Urdu language and literature.',
+          education: 'B.S in Urdu, University of Karachi',
           email: 'principal@theyesschoolingsystem.edu',
           phone: '0314-2315538',
-          image: 'https://source.unsplash.com/random/400x400/?principal,man'
+          image: '/images/staff/abdul-rehman.jpg'
         },
         {
           id: 2,
-          name: 'Mrs. Aisha Khan',
+          name: 'Muhammad Sameer Khan',
           position: 'Vice Principal',
           department: 'administration',
-          bio: 'Mrs. Aisha oversees academic programs and student development with 15 years of teaching experience.',
-          education: 'M.Sc. Mathematics, Punjab University',
+          bio: 'Muhammad Sameer Khan brings engineering expertise to education leadership. He also serves as a visiting lecturer at the Department of Applied Chemistry, University of Karachi.',
+          education: 'M.E in Materials Engineering, NED University of Engineering & Technology',
           email: 'viceprincipal@theyesschoolingsystem.edu',
           phone: '0311-8410539',
-          image: 'https://source.unsplash.com/random/400x400/?teacher,woman'
+          image: '/images/staff/muhammad-sameer-khan.jpg'
         },
         {
           id: 3,
