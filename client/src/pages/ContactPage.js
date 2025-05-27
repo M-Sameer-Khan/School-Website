@@ -107,11 +107,29 @@ const ContactPage = () => {
               </div>
             </div>
 
-            {/* Google Maps Embed (placeholder) */}
-            <div className="mt-8 rounded-lg overflow-hidden h-64 bg-gray-200 flex items-center justify-center">
-              <div className="text-gray-500 text-center p-4">
-                <p>Google Maps Integration Placeholder</p>
-                <p className="text-sm mt-2">Interactive map showing our school location will appear here</p>
+            {/* Google Maps Embed */}
+            <div className="mt-8 rounded-lg overflow-hidden shadow-md">
+              <h3 className="font-medium text-gray-800 mb-2">Our Location</h3>
+              <div className="w-full h-80 relative">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3617.399890406242!2d67.03249091574959!3d24.952232184017647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb340c11c25f705%3A0x3fad5cd0ce7f8ba!2sTHE%20YES%20SCHOOLING%20SYSTEM!5e0!3m2!1sen!2s!4v1653673987654!5m2!1sen!2s" 
+                  width="100%" 
+                  height="100%" 
+                  style={{ border: 0 }} 
+                  allowFullScreen="" 
+                  loading="lazy" 
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="School Location Map"
+                  className="rounded-lg"
+                ></iframe>
+              </div>
+              <div className="mt-2 text-sm text-primary-600">
+                <a href="https://maps.app.goo.gl/pckbpnU1GdTpXeKg8" target="_blank" rel="noopener noreferrer" className="flex items-center hover:text-primary-800">
+                  <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fillRule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clipRule="evenodd"></path>
+                  </svg>
+                  View on Google Maps
+                </a>
               </div>
             </div>
           </div>
