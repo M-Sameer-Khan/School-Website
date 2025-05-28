@@ -15,39 +15,66 @@ const GalleryPage = () => {
       const sampleGalleries = [
         {
           id: 1,
-          title: 'Annual Day Celebration',
-          slug: 'annual-day-2025',
-          description: 'Highlights from our Annual Day celebrations with performances and awards.',
-          coverImage: 'https://source.unsplash.com/random/600x400/?school,event',
-          eventDate: '2025-03-15',
-          imageCount: 24
+          title: 'Arts Competition 2025',
+          slug: 'arts-competition-2025',
+          description: 'Showcasing the creative talents of our students in the annual arts competition.',
+          coverImage: '/images/gallery/arts-competition-2025/IMG_20250523_100657_631.jpg',
+          eventDate: '2025-05-23',
+          imageCount: 72
         },
         {
           id: 2,
-          title: 'Sports Day',
-          slug: 'sports-day-2025',
-          description: 'Students participating in various sports activities and competitions.',
-          coverImage: 'https://source.unsplash.com/random/600x400/?school,sports',
-          eventDate: '2025-02-10',
-          imageCount: 36
+          title: 'Annual Function 2025',
+          slug: 'annual-function-2025',
+          description: 'Highlights from our Annual Function with performances and award ceremonies.',
+          coverImage: '/images/gallery/annual-function-2025/IMG_0383.JPG',
+          eventDate: '2025-04-12',
+          imageCount: 25
         },
         {
           id: 3,
-          title: 'Science Exhibition',
-          slug: 'science-exhibition-2025',
-          description: 'Student projects and innovations at our annual science exhibition.',
-          coverImage: 'https://source.unsplash.com/random/600x400/?school,science',
-          eventDate: '2025-01-20',
-          imageCount: 18
+          title: 'Practical Lab Experiments 2025',
+          slug: 'practical-2025',
+          description: 'Documentation of various lab experiments conducted by our students in 2025.',
+          coverImage: '/images/gallery/practical-2025/lab-experiment-1.jpg',
+          eventDate: '2025-03-24',
+          imageCount: 12
         },
         {
           id: 4,
-          title: 'Independence Day',
-          slug: 'independence-day-2024',
-          description: 'Celebration of Pakistan Independence Day with cultural performances.',
-          coverImage: 'https://source.unsplash.com/random/600x400/?independence,flag',
-          eventDate: '2024-08-14',
-          imageCount: 32
+          title: 'Orange Day 2025',
+          slug: 'orange-day-2025',
+          description: 'Celebrating Orange Day with colorful activities and events.',
+          coverImage: '/images/gallery/orange-day-2025/IMG_0111.JPG',
+          eventDate: '2025-03-10',
+          imageCount: 13
+        },
+        {
+          id: 5,
+          title: 'Teachers Training 2025',
+          slug: 'teachers-training-2025',
+          description: 'Professional development sessions for our dedicated teaching staff.',
+          coverImage: '/images/gallery/teachers-training-2025/Snapchat-1012102945.jpg',
+          eventDate: '2025-02-15',
+          imageCount: 33
+        },
+        {
+          id: 6,
+          title: 'Arts Day 2025',
+          slug: 'arts-day-2025',
+          description: 'A day dedicated to celebrating arts and creativity in our school.',
+          coverImage: '/images/gallery/arts-day-2025/IMG-20250118-WA0019.jpg',
+          eventDate: '2025-01-18',
+          imageCount: 28
+        },
+        {
+          id: 7,
+          title: 'Student Picnic 2023',
+          slug: 'picnic-2023',
+          description: 'Fun-filled educational trip for our students to explore and learn.',
+          coverImage: '/images/gallery/picnic-2023/IMG_6974.JPG',
+          eventDate: '2023-11-15',
+          imageCount: 19
         }
       ];
       setGalleries(sampleGalleries);

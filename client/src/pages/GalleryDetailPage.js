@@ -16,52 +16,108 @@ const GalleryDetailPage = () => {
     setTimeout(() => {
       // Sample gallery data based on slug
       const galleryData = {
-        'annual-day-2025': {
+        'arts-competition-2025': {
           id: 1,
-          title: 'Annual Day Celebration',
-          description: 'Highlights from our Annual Day celebrations with performances and awards.',
-          eventDate: '2025-03-15',
-          images: Array(24).fill().map((_, index) => ({
-            id: index + 1,
-            src: `https://source.unsplash.com/random/800x600/?school,performance,${index}`,
-            alt: `Annual Day Celebration Photo ${index + 1}`,
-            caption: `Students performing at the Annual Day ${index % 3 === 0 ? 'dance' : index % 3 === 1 ? 'drama' : 'music'} event`
-          }))
+          title: 'Arts Competition 2025',
+          description: 'Showcasing the creative talents of our students in the annual arts competition.',
+          eventDate: '2025-05-23',
+          images: [
+            // Adding all 72 arts competition images
+            ...[...Array(72)].map((_, index) => ({
+              id: index + 1,
+              src: `/images/gallery/arts-competition-2025/IMG_20250523_${index < 10 ? '1000' : '10'}${index < 10 ? index + '0' : index}_${index < 10 ? '631' : Math.floor(Math.random() * 1000)}.jpg`,
+              alt: `Arts Competition Photo ${index + 1}`,
+              caption: `Student artwork from the annual arts competition`
+            }))
+          ]
         },
-        'sports-day-2025': {
+        'annual-function-2025': {
           id: 2,
-          title: 'Sports Day',
-          description: 'Students participating in various sports activities and competitions.',
-          eventDate: '2025-02-10',
-          images: Array(36).fill().map((_, index) => ({
-            id: index + 1,
-            src: `https://source.unsplash.com/random/800x600/?school,sports,${index}`,
-            alt: `Sports Day Photo ${index + 1}`,
-            caption: `Students participating in ${index % 4 === 0 ? 'race' : index % 4 === 1 ? 'cricket' : index % 4 === 2 ? 'football' : 'basketball'}`
-          }))
+          title: 'Annual Function 2025',
+          description: 'Highlights from our Annual Function with performances and award ceremonies.',
+          eventDate: '2025-04-12',
+          images: [
+            // First 12 images are in IMG_XXXX.JPG format
+            ...[...Array(12)].map((_, index) => ({
+              id: index + 1,
+              src: `/images/gallery/annual-function-2025/IMG_0${383 + index}.JPG`,
+              alt: `Annual Function Photo ${index + 1}`,
+              caption: `Students and staff participating in the annual function`
+            })),
+            // Next 3 images are in IMG_99XX.JPG format
+            ...[...Array(3)].map((_, index) => ({
+              id: index + 13,
+              src: `/images/gallery/annual-function-2025/IMG_99${index < 10 ? '0' : ''}${4 + index}.JPG`,
+              alt: `Annual Function Photo ${index + 13}`,
+              caption: `Students and staff participating in the annual function`
+            })),
+            // Last 10 images are in IMG_20250412_XXXXXX.jpg format
+            ...[...Array(10)].map((_, index) => ({
+              id: index + 16,
+              src: `/images/gallery/annual-function-2025/IMG_20250412_${165634 + index * 5000}.jpg`,
+              alt: `Annual Function Photo ${index + 16}`,
+              caption: `Students and staff participating in the annual function`
+            }))
+          ]
         },
-        'science-exhibition-2025': {
+        'practical-2025': {
           id: 3,
-          title: 'Science Exhibition',
-          description: 'Student projects and innovations at our annual science exhibition.',
-          eventDate: '2025-01-20',
-          images: Array(18).fill().map((_, index) => ({
+          title: 'Practical Lab Experiments 2025',
+          description: 'Documentation of various lab experiments conducted by our students in 2025.',
+          eventDate: '2025-03-24',
+          images: Array(12).fill().map((_, index) => ({
             id: index + 1,
-            src: `https://source.unsplash.com/random/800x600/?science,project,${index}`,
-            alt: `Science Exhibition Photo ${index + 1}`,
-            caption: `Student project on ${index % 3 === 0 ? 'renewable energy' : index % 3 === 1 ? 'robotics' : 'environmental science'}`
+            src: `/images/gallery/practical-2025/lab-experiment-${index + 1}.jpg`,
+            alt: `Lab Experiment Photo ${index + 1}`,
+            caption: `Students conducting laboratory experiment ${index + 1}`
           }))
         },
-        'independence-day-2024': {
+        'orange-day-2025': {
           id: 4,
-          title: 'Independence Day',
-          description: 'Celebration of Pakistan Independence Day with cultural performances.',
-          eventDate: '2024-08-14',
-          images: Array(32).fill().map((_, index) => ({
+          title: 'Orange Day 2025',
+          description: 'Celebrating Orange Day with colorful activities and events.',
+          eventDate: '2025-03-10',
+          images: Array(13).fill().map((_, index) => ({
             id: index + 1,
-            src: `https://source.unsplash.com/random/800x600/?independence,celebration,${index}`,
-            alt: `Independence Day Photo ${index + 1}`,
-            caption: `Independence Day celebration ${index % 3 === 0 ? 'flag hoisting' : index % 3 === 1 ? 'cultural performance' : 'group photo'}`
+            src: `/images/gallery/orange-day-2025/IMG_0${111 + index}.JPG`,
+            alt: `Orange Day Photo ${index + 1}`,
+            caption: `Students celebrating Orange Day with vibrant activities`
+          }))
+        },
+        'teachers-training-2025': {
+          id: 5,
+          title: 'Teachers Training 2025',
+          description: 'Professional development sessions for our dedicated teaching staff.',
+          eventDate: '2025-02-15',
+          images: Array(33).fill().map((_, index) => ({
+            id: index + 1,
+            src: `/images/gallery/teachers-training-2025/Snapchat-${(index + 1) * 100000000}.jpg`,
+            alt: `Teachers Training Photo ${index + 1}`,
+            caption: `Staff professional development session ${index + 1}`
+          }))
+        },
+        'arts-day-2025': {
+          id: 6,
+          title: 'Arts Day 2025',
+          description: 'A day dedicated to celebrating arts and creativity in our school.',
+          eventDate: '2025-01-18',
+          images: Array(28).fill().map((_, index) => ({
+            id: index + 1,
+            src: `/images/gallery/arts-day-2025/IMG-20250118-WA00${19 + index}.jpg`,
+            alt: `Arts Day Photo ${index + 1}`,
+            caption: `Creative expressions during Arts Day celebrations`
+          }))
+        },
+        'picnic-2023': {
+          id: 7,
+          title: 'Student Picnic 2023',
+          description: 'Fun-filled educational trip for our students to explore and learn.',
+          eventDate: '2023-11-15',
+          images: Array(19).fill().map((_, index) => ({
+            id: index + 1,
+            src: `/images/gallery/picnic-2023/IMG_${6974 + index * 50}.JPG`,
+            alt: `Student Picnic Photo ${index + 1}`,
+            caption: `Students enjoying educational picnic activities`
           }))
         }
       };
