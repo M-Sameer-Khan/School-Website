@@ -4,16 +4,21 @@ import { Link } from 'react-router-dom';
 const HomePage = () => {
   return (
     <div className="fade-in">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-primary-700 to-primary-900 text-white py-24 mb-12 rounded-lg overflow-hidden">
-        <div className="absolute inset-0 bg-black opacity-20"></div>
+      {/* Hero Section with School Staff Image */}
+      <section className="relative text-white py-24 mb-12 rounded-lg overflow-hidden" style={{
+        backgroundImage: "url('/images/school-staff.png')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        border: '12px solid #FFD700', /* Yellow border for THE YES SCHOOLING SYSTEM */
+      }}>
+        <div className="absolute inset-0 bg-black opacity-40"></div>
         <div className="relative container mx-auto px-4 z-10">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl bg-black bg-opacity-50 p-6 rounded-lg">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Welcome to Our School
+              Welcome to THE YES SCHOOLING SYSTEM
             </h1>
             <p className="text-xl md:text-2xl mb-8">
-              Providing excellence in education since [YEAR]
+              Providing excellence since 2022
             </p>
             <div className="flex flex-wrap gap-4">
               <Link 

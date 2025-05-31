@@ -56,6 +56,7 @@ const Header = () => {
             <NavLink to="/gallery" label="Gallery" />
             <NavLink to="/staff" label="Staff" />
             <NavLink to="/alumni" label="Alumni" />
+            <NavLink to="/fees" label="Fees" />
             <NavLink to="/contact" label="Contact" />
             
             {/* Login/Admin Button */}
@@ -115,6 +116,7 @@ const Header = () => {
               <MobileNavLink to="/gallery" label="Gallery" />
               <MobileNavLink to="/staff" label="Staff" />
               <MobileNavLink to="/alumni" label="Alumni" />
+              <MobileNavLink to="/fees" label="Fees" />
               <MobileNavLink to="/contact" label="Contact" />
               
               {/* Login/Admin Button */}

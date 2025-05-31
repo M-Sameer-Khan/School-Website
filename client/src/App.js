@@ -13,6 +13,7 @@ import GalleryDetailPage from './pages/GalleryDetailPage';
 import StaffPage from './pages/StaffPage';
 import AlumniPage from './pages/AlumniPage';
 import ContactPage from './pages/ContactPage';
+import FeesPage from './pages/FeesPage';
 import NotFoundPage from './pages/NotFoundPage';
 
 // Admin components
@@ -60,6 +61,7 @@ function App() {
             <Route path="/staff" element={<StaffPage />} />
             <Route path="/alumni" element={<AlumniPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/fees" element={<FeesPage />} />
             
             {/* Admin Routes */}
             <Route path="/admin/login" element={<AdminLogin />} />

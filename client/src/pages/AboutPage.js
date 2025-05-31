@@ -49,14 +49,14 @@ const AboutPage = () => {
               
               {/* Timeline Items */}
               <div className="relative z-10">
-                {/* Year 1 */}
+                {/* 2022 - Founding Year */}
                 <div className="mb-12 relative">
                   <div className="flex flex-col md:flex-row items-center">
                     <div className="md:w-1/2 md:pr-8 md:text-right order-1 md:order-1">
                       <div className="bg-white p-6 rounded-lg shadow-md">
-                        <h3 className="text-xl font-bold mb-2 text-primary-700">[FOUNDING YEAR]</h3>
+                        <h3 className="text-xl font-bold mb-2 text-primary-700">2022</h3>
                         <p className="text-gray-600">
-                          Our school was founded with a vision to provide quality education that balances academic excellence with character development.
+                          THE YES SCHOOLING SYSTEM was founded with a vision to provide quality education that balances academic excellence with character development.
                         </p>
                       </div>
                     </div>
@@ -65,30 +65,30 @@ const AboutPage = () => {
                   </div>
                 </div>
 
-                {/* Year 2 */}
+                {/* 2023 - First Milestone */}
                 <div className="mb-12 relative">
                   <div className="flex flex-col md:flex-row items-center">
                     <div className="md:w-1/2 md:pr-8 order-1 md:order-0"></div>
                     <div className="mx-auto md:mx-0 h-8 w-8 rounded-full bg-primary-500 border-4 border-white flex items-center justify-center shadow-md order-0 md:order-1 my-4 md:my-0"></div>
-                    <div className="md:w-1/2 md:pl-8 md:text-left order-2 md:order-2">
+                    <div className="md:w-1/2 md:pl-8 order-2 md:order-2">
                       <div className="bg-white p-6 rounded-lg shadow-md">
-                        <h3 className="text-xl font-bold mb-2 text-primary-700">[MILESTONE YEAR]</h3>
+                        <h3 className="text-xl font-bold mb-2 text-primary-700">2023</h3>
                         <p className="text-gray-600">
-                          The school expanded its facilities and introduced innovative teaching methodologies, setting new standards for educational excellence in the region.
+                          We expanded our facilities to include state-of-the-art science and computer laboratories, enhancing our STEM education offerings and establishing strong community connections.
                         </p>
                       </div>
                     </div>
                   </div>
                 </div>
 
-                {/* Year 3 */}
+                {/* 2024 - Second Milestone */}
                 <div className="mb-12 relative">
                   <div className="flex flex-col md:flex-row items-center">
                     <div className="md:w-1/2 md:pr-8 md:text-right order-1 md:order-1">
                       <div className="bg-white p-6 rounded-lg shadow-md">
-                        <h3 className="text-xl font-bold mb-2 text-primary-700">[MILESTONE YEAR]</h3>
+                        <h3 className="text-xl font-bold mb-2 text-primary-700">2024</h3>
                         <p className="text-gray-600">
-                          Our school achieved national recognition for academic excellence and was awarded for its outstanding contributions to education.
+                          We introduced innovative teaching methods and expanded our curriculum to include a broader range of subjects and extracurricular activities, focusing on holistic student development.
                         </p>
                       </div>
                     </div>
@@ -97,16 +97,16 @@ const AboutPage = () => {
                   </div>
                 </div>
 
-                {/* Year 4 - Present */}
+                {/* 2025 - Present */}
                 <div className="relative">
                   <div className="flex flex-col md:flex-row items-center">
                     <div className="md:w-1/2 md:pr-8 order-1 md:order-0"></div>
                     <div className="mx-auto md:mx-0 h-8 w-8 rounded-full bg-primary-500 border-4 border-white flex items-center justify-center shadow-md order-0 md:order-1 my-4 md:my-0"></div>
-                    <div className="md:w-1/2 md:pl-8 md:text-left order-2 md:order-2">
+                    <div className="md:w-1/2 md:pl-8 order-2 md:order-2">
                       <div className="bg-white p-6 rounded-lg shadow-md">
-                        <h3 className="text-xl font-bold mb-2 text-primary-700">Present Day</h3>
+                        <h3 className="text-xl font-bold mb-2 text-primary-700">2025</h3>
                         <p className="text-gray-600">
-                          Today, our school continues to thrive with a commitment to educational innovation, holistic development, and preparing students for future success in a global society.
+                          Today, our school continues to grow and evolve, maintaining our commitment to educational excellence and preparing students for future success in a rapidly changing world.
                         </p>
                       </div>
                     </div>
@@ -183,53 +183,57 @@ const AboutPage = () => {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-12 text-center text-gray-800">Our Leadership Team</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Leader 1 */}
+            {/* Principal - Abdul Rehman */}
             <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
-              <div className="h-64 bg-gray-300"></div>
+              <div className="h-64 bg-cover bg-center" style={{ backgroundImage: "url('/images/staff/abdul-rehman.jpg')" }}></div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-1 text-gray-800">Dr. Jane Smith</h3>
+                <h3 className="text-xl font-semibold mb-1 text-gray-800">Abdul Rehman</h3>
                 <p className="text-primary-600 font-medium mb-4">Principal</p>
                 <p className="text-gray-600 mb-4">
-                  Dr. Smith brings over 20 years of experience in education leadership, with a focus on innovative teaching methodologies and student-centered learning environments.
+                  Abdul Rehman is an experienced educator with a strong foundation in Urdu language and literature. He leads THE YES SCHOOLING SYSTEM with a vision for academic excellence and character development.
                 </p>
                 <p className="text-gray-500">
-                  Ph.D. in Educational Leadership<br />
-                  M.Ed. in Curriculum Development<br />
-                  B.A. in Education
+                  B.S in Urdu, University of Karachi<br />
+                  Educational Leadership Certification<br />
+                  School Management Training
                 </p>
               </div>
             </div>
 
-            {/* Leader 2 */}
+            {/* Vice Principal - Muhammad Sameer Khan */}
             <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
-              <div className="h-64 bg-gray-300"></div>
+              <div className="h-64 bg-cover bg-center" style={{ backgroundImage: "url('/images/staff/muhammad-sameer-khan.jpg')" }}></div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-1 text-gray-800">Prof. John Doe</h3>
+                <h3 className="text-xl font-semibold mb-1 text-gray-800">Muhammad Sameer Khan</h3>
                 <p className="text-primary-600 font-medium mb-4">Vice Principal</p>
                 <p className="text-gray-600 mb-4">
-                  Prof. Doe specializes in curriculum development and technology integration, leading our school's digital transformation initiatives and academic excellence programs.
+                  Muhammad Sameer Khan brings engineering expertise to education leadership. He also serves as a visiting lecturer at the Department of Applied Chemistry, University of Karachi.
                 </p>
                 <p className="text-gray-500">
-                  M.Ed. in Educational Technology<br />
-                  B.Sc. in Mathematics<br />
-                  Certified Educational Administrator
+                  M.E in Materials Engineering<br />
+                  NED University of Engineering & Technology<br />
+                  Visiting Lecturer, Department of Applied Chemistry, University of Karachi
                 </p>
               </div>
             </div>
 
-            {/* Leader 3 */}
+            {/* Academic Coordinator */}
             <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
-              <div className="h-64 bg-gray-300"></div>
+              <div className="h-64 bg-primary-100 flex items-center justify-center">
+                <svg className="w-24 h-24 text-primary-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                </svg>
+              </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-1 text-gray-800">Ms. Sarah Johnson</h3>
-                <p className="text-primary-600 font-medium mb-4">Academic Director</p>
+                <h3 className="text-xl font-semibold mb-1 text-gray-800">Academic Coordinator</h3>
+                <p className="text-primary-600 font-medium mb-4">Curriculum Development</p>
                 <p className="text-gray-600 mb-4">
-                  Ms. Johnson oversees academic programs and student development initiatives, ensuring that our curriculum meets the highest standards and addresses diverse learning needs.
+                  Our Academic Coordinator oversees curriculum development and implementation, ensuring that our educational programs meet national standards while addressing the unique needs of our students.
                 </p>
                 <p className="text-gray-500">
-                  M.A. in Educational Psychology<br />
-                  B.A. in Child Development<br />
-                  Advanced Certification in Curriculum Design
+                  Experienced in educational program design<br />
+                  Student assessment and evaluation<br />
+                  Teacher training and development
                 </p>
               </div>
             </div>

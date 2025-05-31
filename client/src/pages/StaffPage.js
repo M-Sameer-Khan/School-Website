@@ -1,214 +1,184 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import Card from '../components/common/Card';
+import Spinner from '../components/common/Spinner';
 
 const StaffPage = () => {
+  const [staff, setStaff] = useState([]);
   const [departments, setDepartments] = useState([]);
+  const [activeTab, setActiveTab] = useState('all');
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [activeDepartment, setActiveDepartment] = useState('all');
 
   useEffect(() => {
-    const fetchStaff = async () => {
-      try {
-        const res = await axios.get('/api/staff');
-        setDepartments(res.data);
-        setLoading(false);
-      } catch (err) {
-        console.error('Error fetching staff:', err);
-        setError('Failed to load staff information. Please try again later.');
-        setLoading(false);
-        
-        // For demo purposes, set mock data if the API call fails
-        setDepartments([
-          {
-            id: 1,
-            name: 'Administration',
-            staff: [
-              {
-                id: 1,
-                name: 'Dr. Sarah Johnson',
-                title: 'Principal',
-                email: 'principal@example.school.com',
-                phone: '(123) 456-7890',
-                bio: 'Dr. Johnson has over 20 years of experience in education leadership and holds a Ph.D. in Educational Administration.',
-                profileImage: {
-                  url: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80'
-                }
-              },
-              {
-                id: 2,
-                name: 'Robert Williams',
-                title: 'Vice Principal',
-                email: 'vp@example.school.com',
-                phone: '(123) 456-7891',
-                bio: 'Mr. Williams oversees curriculum development and student activities. He has been with the school for 15 years.',
-                profileImage: {
-                  url: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80'
-                }
-              }
-            ]
-          },
-          {
-            id: 2,
-            name: 'Mathematics',
-            staff: [
-              {
-                id: 3,
-                name: 'Dr. Michael Chen',
-                title: 'Head of Mathematics',
-                email: 'math@example.school.com',
-                phone: '(123) 456-7892',
-                bio: 'Dr. Chen specializes in applied mathematics and has published several papers on innovative teaching methods.',
-                profileImage: {
-                  url: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80'
-                }
-              },
-              {
-                id: 4,
-                name: 'Emily Rodriguez',
-                title: 'Mathematics Teacher',
-                email: 'erodriguez@example.school.com',
-                phone: '(123) 456-7893',
-                bio: 'Ms. Rodriguez teaches Algebra and Calculus. She is known for making complex concepts accessible to all students.',
-                profileImage: {
-                  url: 'https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80'
-                }
-              }
-            ]
-          },
-          {
-            id: 3,
-            name: 'Science',
-            staff: [
-              {
-                id: 5,
-                name: 'Dr. James Wilson',
-                title: 'Head of Science',
-                email: 'science@example.school.com',
-                phone: '(123) 456-7894',
-                bio: 'Dr. Wilson has a background in research physics and brings real-world applications into the classroom.',
-                profileImage: {
-                  url: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80'
-                }
-              },
-              {
-                id: 6,
-                name: 'Dr. Aisha Patel',
-                title: 'Biology Teacher',
-                email: 'biology@example.school.com',
-                phone: '(123) 456-7895',
-                bio: 'Dr. Patel has led several environmental research projects with students and organizes the annual science fair.',
-                profileImage: {
-                  url: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80'
-                }
-              }
-            ]
-          }
-        ]);
-      }
-    };
+    // This would typically fetch from your API
+    // For now, let's use sample data
+    setTimeout(() => {
+      const departmentData = [
+        { id: 'all', name: 'All Staff' },
+        { id: 'administration', name: 'Administration' },
+        { id: 'teaching', name: 'Teaching Staff' },
+        { id: 'support', name: 'Support Staff' }
+      ];
 
-    fetchStaff();
+      const staffData = [
+        {
+          id: 1,
+          name: 'Abdul Rehman',
+          position: 'Principal',
+          department: 'administration',
+          bio: 'Abdul Rehman is an experienced educator with a strong foundation in Urdu language and literature.',
+          education: 'B.S in Urdu, University of Karachi',
+          email: 'principal@theyesschoolingsystem.edu',
+          phone: '0314-2315538',
+          image: '/images/staff/abdul-rehman.jpg'
+        },
+        {
+          id: 2,
+          name: 'Muhammad Sameer Khan',
+          position: 'Vice Principal',
+          department: 'administration',
+          bio: 'Muhammad Sameer Khan brings engineering expertise to education leadership. He also serves as a visiting lecturer at the Department of Applied Chemistry, University of Karachi.',
+          education: 'M.E in Materials Engineering, NED University of Engineering & Technology',
+          email: 'viceprincipal@theyesschoolingsystem.edu',
+          phone: '0311-8410539',
+          image: '/images/staff/muhammad-sameer-khan.jpg'
+        },
+        {
+          id: 3,
+          name: 'Mr. Imran Malik',
+          position: 'Mathematics Teacher',
+          department: 'teaching',
+          bio: 'Mr. Imran specializes in making complex mathematical concepts accessible to all students.',
+          education: 'B.Sc. Mathematics, University of Sindh',
+          email: 'math@theyesschoolingsystem.edu',
+          phone: '0314-XXXXXXX',
+          image: 'https://source.unsplash.com/random/400x400/?math,teacher,man'
+        },
+        {
+          id: 4,
+          name: 'Ms. Fatima Hassan',
+          position: 'Science Teacher',
+          department: 'teaching',
+          bio: 'Ms. Fatima brings science to life through practical experiments and real-world applications.',
+          education: 'M.Sc. Physics, University of Karachi',
+          email: 'science@theyesschoolingsystem.edu',
+          phone: '0311-XXXXXXX',
+          image: 'https://source.unsplash.com/random/400x400/?science,teacher,woman'
+        },
+        {
+          id: 5,
+          name: 'Mr. Ali Raza',
+          position: 'English Teacher',
+          department: 'teaching',
+          bio: 'Mr. Ali encourages students to develop their language skills through creative writing and reading.',
+          education: 'M.A. English Literature, Karachi University',
+          email: 'english@theyesschoolingsystem.edu',
+          phone: '0314-XXXXXXX',
+          image: 'https://source.unsplash.com/random/400x400/?english,teacher,man'
+        },
+        {
+          id: 6,
+          name: 'Mrs. Saima Jabbar',
+          position: 'Urdu Teacher',
+          department: 'teaching',
+          bio: 'Mrs. Saima is dedicated to preserving and promoting Urdu language and literature among students.',
+          education: 'M.A. Urdu, University of Punjab',
+          email: 'urdu@theyesschoolingsystem.edu',
+          phone: '0311-XXXXXXX',
+          image: 'https://source.unsplash.com/random/400x400/?teacher,woman,2'
+        },
+        {
+          id: 7,
+          name: 'Mr. Ahmed Khan',
+          position: 'IT Administrator',
+          department: 'support',
+          bio: 'Mr. Ahmed manages all IT systems and introduces students to the latest technologies.',
+          education: 'B.Sc. Computer Science, FAST University',
+          email: 'it@theyesschoolingsystem.edu',
+          phone: '0314-XXXXXXX',
+          image: 'https://source.unsplash.com/random/400x400/?it,admin,man'
+        },
+        {
+          id: 8,
+          name: 'Ms. Nadia Sheikh',
+          position: 'Librarian',
+          department: 'support',
+          bio: 'Ms. Nadia cultivates a love of reading among students and helps them discover new worlds through books.',
+          education: 'B.L.I.S., University of Karachi',
+          email: 'library@theyesschoolingsystem.edu',
+          phone: '0311-XXXXXXX',
+          image: 'https://source.unsplash.com/random/400x400/?librarian,woman'
+        }
+      ];
+
+      setDepartments(departmentData);
+      setStaff(staffData);
+      setLoading(false);
+    }, 1000);
   }, []);
 
-  const filteredDepartments = activeDepartment === 'all' 
-    ? departments 
-    : departments.filter(dept => dept.id === parseInt(activeDepartment));
+  const filteredStaff = activeTab === 'all' 
+    ? staff 
+    : staff.filter(member => member.department === activeTab);
 
-  if (loading) {
-    return (
-      <div className="container mx-auto py-8">
-        <div className="text-center">
-          <div className="w-12 h-12 border-4 border-primary-500 border-t-transparent rounded-full animate-spin mx-auto"></div>
-          <p className="mt-4 text-lg">Loading staff information...</p>
-        </div>
-      </div>
-    );
-  }
+  if (loading) return <Spinner />;
 
-  if (error) {
-    return (
-      <div className="container mx-auto py-8">
-        <div className="text-center text-red-600">
-          <p>{error}</p>
-        </div>
-      </div>
-    );
-  }
+  if (error) return <div className="text-center text-red-600">Error loading staff: {error}</div>;
 
   return (
-    <div className="container mx-auto py-8">
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-gray-800 mb-4">Our Staff</h1>
-        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-          Meet our dedicated team of educators and administrators who are committed to providing
-          quality education and support to all students.
-        </p>
+    <div className="staff-page">
+      <div className="mb-8">
+        <h1 className="text-3xl font-bold text-primary-800 mb-2">Our Staff</h1>
+        <p className="text-gray-600">Meet the dedicated professionals at THE YES SCHOOLING SYSTEM</p>
       </div>
 
-      {/* Department Filter */}
-      <div className="mb-8 flex flex-wrap justify-center gap-2">
-        <button
-          onClick={() => setActiveDepartment('all')}
-          className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-            activeDepartment === 'all'
-              ? 'bg-primary-500 text-white'
-              : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-          }`}
-        >
-          All Departments
-        </button>
-        {departments.map((dept) => (
-          <button
-            key={dept.id}
-            onClick={() => setActiveDepartment(dept.id)}
-            className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-              activeDepartment === dept.id
-                ? 'bg-primary-500 text-white'
-                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-            }`}
-          >
-            {dept.name}
-          </button>
-        ))}
+      {/* Department Tabs */}
+      <div className="mb-8 border-b border-gray-200">
+        <div className="flex flex-wrap -mb-px">
+          {departments.map(dept => (
+            <button
+              key={dept.id}
+              className={`inline-block py-4 px-6 text-sm font-medium ${activeTab === dept.id
+                ? 'text-primary-600 border-b-2 border-primary-600'
+                : 'text-gray-600 hover:text-primary-600 hover:border-b-2 hover:border-primary-300'
+              }`}
+              onClick={() => setActiveTab(dept.id)}
+            >
+              {dept.name}
+            </button>
+          ))}
+        </div>
       </div>
 
-      {/* Staff Cards by Department */}
-      {filteredDepartments.map((department) => (
-        <div key={department.id} className="mb-12">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-6 pb-2 border-b border-gray-200">
-            {department.name} Department
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {department.staff.map((member) => (
-              <div key={member.id} className="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg">
-                <div className="flex flex-col h-full">
-                  <div className="p-4 flex items-center">
-                    <div className="w-24 h-24 rounded-full overflow-hidden flex-shrink-0 mr-4 border-2 border-primary-100">
-                      <img
-                        src={member.profileImage?.url || 'https://via.placeholder.com/150'}
-                        alt={member.name}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-gray-800">{member.name}</h3>
-                      <p className="text-primary-600 font-medium">{member.title}</p>
-                      <div className="mt-2 text-sm text-gray-600">
-                        <p>{member.email}</p>
-                        <p>{member.phone}</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="p-4 bg-gray-50 flex-grow">
-                    <p className="text-gray-700">{member.bio}</p>
-                  </div>
+      {filteredStaff.length === 0 ? (
+        <div className="text-center py-12">
+          <p className="text-xl text-gray-500">No staff members in this category.</p>
+        </div>
+      ) : (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredStaff.map((member) => (
+            <Card key={member.id}>
+              <div className="p-4">
+                <div className="flex flex-col items-center mb-4">
+                  <img 
+                    src={member.image} 
+                    alt={member.name} 
+                    className="w-32 h-32 rounded-full object-cover mb-4 border-4 border-primary-100"
+                  />
+                  <h3 className="text-xl font-semibold text-primary-700">{member.name}</h3>
+                  <p className="text-gray-600 font-medium">{member.position}</p>
+                </div>
+                <div className="space-y-2 text-gray-700">
+                  <p className="text-sm">{member.bio}</p>
+                  <p className="text-sm"><strong>Education:</strong> {member.education}</p>
+                  <p className="text-sm"><strong>Email:</strong> {member.email}</p>
+                  <p className="text-sm"><strong>Phone:</strong> {member.phone}</p>
                 </div>
               </div>
-            ))}
-          </div>
+            </Card>
+          ))}
         </div>
-      ))}
+      )}
     </div>
   );
 };

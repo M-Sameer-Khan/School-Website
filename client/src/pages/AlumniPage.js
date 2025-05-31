@@ -1,218 +1,157 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import Card from '../components/common/Card';
+import Spinner from '../components/common/Spinner';
 
 const AlumniPage = () => {
   const [alumni, setAlumni] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [activeFilter, setActiveFilter] = useState('all');
+  const [activeYear, setActiveYear] = useState('all');
+  const [years, setYears] = useState([]);
 
   useEffect(() => {
-    const fetchAlumni = async () => {
-      try {
-        const res = await axios.get('/api/alumni');
-        setAlumni(res.data);
-        setLoading(false);
-      } catch (err) {
-        console.error('Error fetching alumni:', err);
-        setError('Failed to load alumni information. Please try again later.');
-        setLoading(false);
-        
-        // For demo purposes, set mock data if the API call fails
-        setAlumni([
-          {
-            id: 1,
-            name: 'Jennifer Clark',
-            graduationYear: 2018,
-            college: 'Harvard University',
-            career: 'Medical Researcher',
-            achievements: 'Published research on infectious diseases. Recipient of the Young Scientist Award 2023.',
-            quote: 'The strong foundation I received at this school prepared me for the challenges of medical research.',
-            profileImage: {
-              url: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80'
-            }
-          },
-          {
-            id: 2,
-            name: 'Marcus Thompson',
-            graduationYear: 2017,
-            college: 'MIT',
-            career: 'Software Engineer',
-            achievements: 'Created a startup focused on educational technology. Developed apps that are used by over 1 million students worldwide.',
-            quote: 'My interest in computer science was sparked in the coding club. I\'m grateful for the mentors who encouraged me to pursue this path.',
-            profileImage: {
-              url: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80'
-            }
-          },
-          {
-            id: 3,
-            name: 'Sophia Martinez',
-            graduationYear: 2016,
-            college: 'Stanford University',
-            career: 'Environmental Scientist',
-            achievements: 'Leading conservation projects in South America. Featured in National Geographic for work on sustainable agriculture.',
-            quote: 'The science projects and field trips we did inspired my passion for environmental conservation.',
-            profileImage: {
-              url: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80'
-            }
-          },
-          {
-            id: 4,
-            name: 'David Kim',
-            graduationYear: 2015,
-            college: 'Juilliard School',
-            career: 'Concert Pianist',
-            achievements: 'Performed at Carnegie Hall. Released two classical music albums. Winner of the International Piano Competition 2022.',
-            quote: 'The music program at school gave me the confidence to pursue my dream of becoming a professional musician.',
-            profileImage: {
-              url: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80'
-            }
-          },
-          {
-            id: 5,
-            name: 'Olivia Washington',
-            graduationYear: 2019,
-            college: 'Columbia University',
-            career: 'Journalist',
-            achievements: 'Pulitzer Prize nominee for investigative reporting. Published articles in major international newspapers.',
-            quote: 'My English teacher\'s emphasis on critical thinking and clear writing has been invaluable in my journalism career.',
-            profileImage: {
-              url: 'https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80'
-            }
-          },
-          {
-            id: 6,
-            name: 'James Wilson',
-            graduationYear: 2020,
-            college: 'Yale University',
-            career: 'Law Student',
-            achievements: 'Editor of Law Review. Internship at the Supreme Court. Community service award for pro bono legal aid.',
-            quote: 'The debate team at school taught me how to construct and present arguments, which has been essential for my legal studies.',
-            profileImage: {
-              url: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80'
-            }
-          }
-        ]);
-      }
-    };
+    // This would typically fetch from your API
+    // For now, let's use sample data
+    setTimeout(() => {
+      const alumniData = [
+        {
+          id: 1,
+          name: 'Fatima Zaidi',
+          graduationYear: 2020,
+          profession: 'Medical Student',
+          university: 'Aga Khan University',
+          achievement: 'Secured scholarship for medical studies at one of Pakistan\'s premier medical institutions.',
+          testimonial: 'THE YES SCHOOLING SYSTEM provided me with a strong foundation in sciences and instilled discipline that helps me in my medical studies.',
+          image: 'https://source.unsplash.com/random/400x400/?graduate,woman'
+        },
+        {
+          id: 2,
+          name: 'Ahmed Hassan',
+          graduationYear: 2019,
+          profession: 'Software Engineer',
+          university: 'FAST University',
+          achievement: 'Working at a leading tech company developing innovative solutions.',
+          testimonial: 'The technology programs and mathematics curriculum at THE YES SCHOOLING SYSTEM helped me develop analytical skills that are essential in my career.',
+          image: 'https://source.unsplash.com/random/400x400/?graduate,man'
+        },
+        {
+          id: 3,
+          name: 'Sara Khan',
+          graduationYear: 2018,
+          profession: 'Chartered Accountant',
+          university: 'Institute of Chartered Accountants of Pakistan',
+          achievement: 'Passed CA exams with distinction and working at a Big Four accounting firm.',
+          testimonial: 'The values of integrity and attention to detail that I learned at THE YES SCHOOLING SYSTEM guide me every day in my professional life.',
+          image: 'https://source.unsplash.com/random/400x400/?graduate,woman,2'
+        },
+        {
+          id: 4,
+          name: 'Mohammad Ali',
+          graduationYear: 2018,
+          profession: 'Civil Engineer',
+          university: 'NED University of Engineering & Technology',
+          achievement: 'Part of the team designing sustainable infrastructure projects across Pakistan.',
+          testimonial: 'My science teachers at THE YES SCHOOLING SYSTEM inspired my interest in engineering and helped me pursue my passion.',
+          image: 'https://source.unsplash.com/random/400x400/?graduate,man,2'
+        },
+        {
+          id: 5,
+          name: 'Aisha Malik',
+          graduationYear: 2017,
+          profession: 'English Teacher',
+          university: 'University of Karachi',
+          achievement: 'Teaching English literature and language at a prestigious school.',
+          testimonial: 'My love for literature was cultivated at THE YES SCHOOLING SYSTEM, and now I have the privilege of passing that passion to a new generation.',
+          image: 'https://source.unsplash.com/random/400x400/?teacher,woman'
+        },
+        {
+          id: 6,
+          name: 'Hassan Raza',
+          graduationYear: 2016,
+          profession: 'Entrepreneur',
+          university: 'Institute of Business Administration',
+          achievement: 'Founded a startup focused on renewable energy solutions for residential areas.',
+          testimonial: 'THE YES SCHOOLING SYSTEM taught me to think critically and seek solutions to problems, skills that are invaluable in my entrepreneurial journey.',
+          image: 'https://source.unsplash.com/random/400x400/?entrepreneur,man'
+        }
+      ];
 
-    fetchAlumni();
+      // Extract unique years and add 'all' option
+      const graduationYears = [
+        { value: 'all', label: 'All Years' },
+        ...Array.from(new Set(alumniData.map(alum => alum.graduationYear)))
+          .map(year => ({ value: year.toString(), label: year.toString() }))
+          .sort((a, b) => b.value - a.value) // Sort years in descending order
+      ];
+
+      setAlumni(alumniData);
+      setYears(graduationYears);
+      setLoading(false);
+    }, 1000);
   }, []);
 
-  const getYearOptions = () => {
-    const years = alumni.map(alum => alum.graduationYear);
-    return [...new Set(years)].sort((a, b) => b - a); // Unique years in descending order
-  };
+  const filteredAlumni = activeYear === 'all'
+    ? alumni
+    : alumni.filter(alum => alum.graduationYear.toString() === activeYear);
 
-  const filteredAlumni = activeFilter === 'all' 
-    ? alumni 
-    : alumni.filter(alum => alum.graduationYear === parseInt(activeFilter));
+  if (loading) return <Spinner />;
 
-  if (loading) {
-    return (
-      <div className="container mx-auto py-8">
-        <div className="text-center">
-          <div className="w-12 h-12 border-4 border-primary-500 border-t-transparent rounded-full animate-spin mx-auto"></div>
-          <p className="mt-4 text-lg">Loading alumni information...</p>
-        </div>
-      </div>
-    );
-  }
-
-  if (error) {
-    return (
-      <div className="container mx-auto py-8">
-        <div className="text-center text-red-600">
-          <p>{error}</p>
-        </div>
-      </div>
-    );
-  }
+  if (error) return <div className="text-center text-red-600">Error loading alumni: {error}</div>;
 
   return (
-    <div className="container mx-auto py-8">
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-gray-800 mb-4">Our Distinguished Alumni</h1>
-        <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-          We take pride in the accomplishments of our former students who have gone on to make significant 
-          contributions in various fields. Their success stories inspire our current students to dream big.
-        </p>
+    <div className="alumni-page">
+      <div className="mb-8">
+        <h1 className="text-3xl font-bold text-primary-800 mb-2">Our Alumni</h1>
+        <p className="text-gray-600">Meet our successful graduates and their achievements</p>
       </div>
 
       {/* Year Filter */}
-      <div className="mb-8 flex flex-wrap justify-center gap-2">
-        <button
-          onClick={() => setActiveFilter('all')}
-          className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-            activeFilter === 'all'
-              ? 'bg-primary-500 text-white'
-              : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-          }`}
+      <div className="mb-8">
+        <label className="mr-2 text-gray-700">Filter by Graduation Year:</label>
+        <select 
+          value={activeYear}
+          onChange={(e) => setActiveYear(e.target.value)}
+          className="px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
         >
-          All Classes
-        </button>
-        {getYearOptions().map((year) => (
-          <button
-            key={year}
-            onClick={() => setActiveFilter(year)}
-            className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-              activeFilter === year
-                ? 'bg-primary-500 text-white'
-                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-            }`}
-          >
-            Class of {year}
-          </button>
-        ))}
+          {years.map(year => (
+            <option key={year.value} value={year.value}>{year.label}</option>
+          ))}
+        </select>
       </div>
 
-      {/* Alumni Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {filteredAlumni.map((alum) => (
-          <div key={alum.id} className="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg">
-            <div className="p-6">
-              <div className="flex items-center mb-4">
-                <div className="w-16 h-16 rounded-full overflow-hidden flex-shrink-0 mr-4 border-2 border-primary-100">
-                  <img
-                    src={alum.profileImage?.url || 'https://via.placeholder.com/150'}
-                    alt={alum.name}
-                    className="w-full h-full object-cover"
+      {filteredAlumni.length === 0 ? (
+        <div className="text-center py-12">
+          <p className="text-xl text-gray-500">No alumni found for the selected year.</p>
+        </div>
+      ) : (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredAlumni.map((alum) => (
+            <Card key={alum.id}>
+              <div className="p-4">
+                <div className="flex flex-col items-center mb-4">
+                  <img 
+                    src={alum.image} 
+                    alt={alum.name} 
+                    className="w-32 h-32 rounded-full object-cover mb-4 border-4 border-primary-100"
                   />
+                  <h3 className="text-xl font-semibold text-primary-700">{alum.name}</h3>
+                  <p className="text-gray-600 font-medium">{alum.profession}</p>
+                  <div className="px-3 py-1 bg-primary-100 text-primary-800 rounded-full text-sm mt-2">
+                    Class of {alum.graduationYear}
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-800">{alum.name}</h3>
-                  <p className="text-primary-600 font-medium">Class of {alum.graduationYear}</p>
+                <div className="space-y-2 text-gray-700">
+                  <p className="text-sm"><strong>University:</strong> {alum.university}</p>
+                  <p className="text-sm"><strong>Achievement:</strong> {alum.achievement}</p>
+                  <blockquote className="italic text-sm border-l-4 border-primary-200 pl-4 mt-4">
+                    "{alum.testimonial}"
+                  </blockquote>
                 </div>
               </div>
-              
-              <div className="mb-4">
-                <p className="text-gray-700"><span className="font-medium">College:</span> {alum.college}</p>
-                <p className="text-gray-700"><span className="font-medium">Career:</span> {alum.career}</p>
-              </div>
-              
-              <div className="mb-4">
-                <h4 className="text-sm font-semibold text-gray-600 uppercase tracking-wider mb-2">Achievements</h4>
-                <p className="text-gray-700">{alum.achievements}</p>
-              </div>
-              
-              <div className="mt-4 pt-4 border-t border-gray-100">
-                <p className="text-gray-600 italic">"{alum.quote}"</p>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      <div className="mt-12 text-center">
-        <h3 className="text-2xl font-semibold text-gray-800 mb-4">Join Our Alumni Network</h3>
-        <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-          Are you a former student? We'd love to hear about your journey and achievements since graduation.
-          Join our alumni network to stay connected with the school and fellow graduates.
-        </p>
-        <button className="bg-primary-500 text-white px-6 py-3 rounded-md font-medium hover:bg-primary-600 transition-colors">
-          Register as Alumni
-        </button>
-      </div>
+            </Card>
+          ))}
+        </div>
+      )}
     </div>
   );
 };
