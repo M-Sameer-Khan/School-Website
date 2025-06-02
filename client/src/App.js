@@ -14,6 +14,8 @@ import StaffPage from './pages/StaffPage';
 import AlumniPage from './pages/AlumniPage';
 import ContactPage from './pages/ContactPage';
 import FeesPage from './pages/FeesPage';
+import FeeManagementPage from './pages/FeeManagementPage';
+import StudentDetailsPage from './pages/StudentDetailsPage';
 import NotFoundPage from './pages/NotFoundPage';
 
 // Admin components
@@ -62,6 +64,8 @@ function App() {
             <Route path="/alumni" element={<AlumniPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/fees" element={<FeesPage />} />
+            <Route path="/fee-management" element={<FeeManagementPage />} />
+            <Route path="/student-details/:studentId" element={<StudentDetailsPage />} />
             
             {/* Admin Routes */}
             <Route path="/admin/login" element={<AdminLogin />} />

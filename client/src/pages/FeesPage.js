@@ -145,6 +145,18 @@ const FeesPage = () => {
               <p className="text-sm mt-6">
                 <em>Note: This fee structure is subject to change. Parents will be notified of any changes in advance.</em>
               </p>
+              
+              {/* Fee Management System Link */}
+              <div className="mt-6 pt-6 border-t border-gray-200">
+                <h3 className="text-xl font-semibold mb-3 text-primary-600">Fee Management System</h3>
+                <p className="mb-4">Access our student fee management system to view and collect student fees.</p>
+                <a 
+                  href="/fee-management" 
+                  className="inline-block px-6 py-3 bg-primary-600 text-white font-medium rounded-md hover:bg-primary-700 transition duration-300"
+                >
+                  Go to Fee Management
+                </a>
+              </div>
             </div>
           </div>
         </div>
