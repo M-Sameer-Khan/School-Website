@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - THE YES SCHOOLING SYSTEM</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Additional styles specific to about page */
+        .about-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/campus.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+            margin-top: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+        
+        .mission-vision {
+            padding: 5rem 0;
+        }
+        
+        .mission-vision-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+        }
+        
+        .mission-vision-card {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .mission-vision-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #1a73e8;
+            text-align: center;
+        }
+        
+        .mission-vision-card p {
+            color: #555;
+            text-align: center;
+        }
+        
+        .history-section {
+            background-color: #f0f4f8;
+            padding: 5rem 0;
+        }
+        
+        .history-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .history-content img {
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .history-text h3 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+        
+        .history-timeline {
+            margin-top: 3rem;
+        }
+        
+        .timeline-item {
+            display: flex;
+            margin-bottom: 2rem;
+        }
+        
+        .timeline-year {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #1a73e8;
+            min-width: 100px;
+        }
+        
+        .timeline-content h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+        
+        .timeline-content p {
+            color: #666;
+        }
+        
+        .values-section {
+            padding: 5rem 0;
+        }
+        
+        .values-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .value-card {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .value-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .value-card .icon {
+            font-size: 2.5rem;
+            color: #1a73e8;
+            margin-bottom: 1rem;
+        }
+        
+        .value-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        
+        .team-section {
+            background-color: #f0f4f8;
+            padding: 5rem 0;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .team-member {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .team-member:hover {
+            transform: translateY(-10px);
+        }
+        
+        .member-info {
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .member-info h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+        
+        .member-info .position {
+            color: #1a73e8;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 0.8rem;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 35px;
+            height: 35px;
+            background-color: #f0f4f8;
+            border-radius: 50%;
+            color: #1a73e8;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background-color: #1a73e8;
+            color: white;
+        }
+        
+        @media (max-width: 992px) {
+            .mission-vision-container,
+            .history-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>THE YES SCHOOLING SYSTEM</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About Us</a></li>
+                    <li><a href="academics.html">Academics</a></li>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="faculty.html">Faculty</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="about-hero">
+        <div class="hero-content">
+            <h1>About THE YES SCHOOLING SYSTEM</h1>
+            <p>Know our story, mission, and values that guide us in shaping future leaders.</p>
+        </div>
+    </section>
+
+    <section class="mission-vision">
+        <div class="container">
+            <div class="section-heading">
+                <h2>Our Mission & Vision</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="mission-vision-container">
+                <div class="mission-vision-card">
+                    <h3>Our Mission</h3>
+                    <p>At THE YES SCHOOLING SYSTEM, our mission is to provide a comprehensive, quality education that empowers students to achieve academic excellence, develop critical thinking skills, and cultivate a strong sense of social responsibility. We are committed to creating a nurturing environment that encourages creativity, innovation, and personal growth, preparing students to become lifelong learners and responsible global citizens.</p>
+                </div>
+                <div class="mission-vision-card">
+                    <h3>Our Vision</h3>
+                    <p>We envision THE YES SCHOOLING SYSTEM as a leading educational institution that inspires excellence, fosters innovation, and nurtures character development. We aim to be recognized for our holistic approach to education, where every student's unique potential is identified and developed to its fullest. Our graduates will be well-rounded individuals equipped with the knowledge, skills, and values necessary to thrive in a rapidly changing world and contribute positively to society.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="history-section">
+        <div class="container">
+            <div class="section-heading">
+                <h2>Our History</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="history-content">
+                <div class="history-image">
+                    <img src="../images/school-history.jpg" alt="School History">
+                </div>
+                <div class="history-text">
+                    <h3>A Legacy of Excellence Since 2010</h3>
+                    <p>THE YES SCHOOLING SYSTEM was founded in 2010 with a vision to provide quality education that focuses on both academic excellence and character development. What started as a small institution with just a handful of students has now grown into a prestigious educational establishment with state-of-the-art facilities and a reputation for excellence.</p>
+                    <p>Over the years, we have continuously evolved our teaching methodologies and curriculum to meet the changing educational needs while staying true to our core values and principles.</p>
+                    
+                    <div class="history-timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-year">2010</div>
+                            <div class="timeline-content">
+                                <h4>Foundation</h4>
+                                <p>THE YES SCHOOLING SYSTEM was established with a vision to provide quality education.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2013</div>
+                            <div class="timeline-content">
+                                <h4>Expansion</h4>
+                                <p>Added secondary education wing and expanded primary facilities.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2016</div>
+                            <div class="timeline-content">
+                                <h4>Academic Excellence</h4>
+                                <p>Achieved highest national rankings for academic performance.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2019</div>
+                            <div class="timeline-content">
+                                <h4>Modern Campus</h4>
+                                <p>Inaugurated new campus with advanced facilities and technology integration.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2022</div>
+                            <div class="timeline-content">
+                                <h4>International Recognition</h4>
+                                <p>Received international accreditation and established exchange programs.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="values-section">
+        <div class="container">
+            <div class="section-heading">
+                <h2>Our Core Values</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="values-cards">
+                <div class="value-card">
+                    <div class="icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Excellence</h3>
+                    <p>We strive for academic and personal excellence in everything we do, continuously raising the bar for achievement.</p>
+                </div>
+                <div class="value-card">
+                    <div class="icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Respect</h3>
+                    <p>We foster a culture of mutual respect, celebrating diversity and treating every individual with dignity.</p>
+                </div>
+                <div class="value-card">
+                    <div class="icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Innovation</h3>
+                    <p>We encourage creative thinking and innovative approaches to learning and problem-solving.</p>
+                </div>
+                <div class="value-card">
+                    <div class="icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Integrity</h3>
+                    <p>We uphold the highest standards of honesty, ethics, and accountability in all our actions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="team-section">
+        <div class="container">
+            <div class="section-heading">
+                <h2>Leadership Team</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="../images/principal.jpg" alt="School Principal">
+                    <div class="member-info">
+                        <h3>Dr. Sarah Johnson</h3>
+                        <p class="position">Principal</p>
+                        <p>Dr. Johnson brings over 20 years of experience in education leadership, with a focus on curriculum development and student-centered learning.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="../images/vice-principal.jpg" alt="Vice Principal">
+                    <div class="member-info">
+                        <h3>Mr. James Wilson</h3>
+                        <p class="position">Vice Principal</p>
+                        <p>With expertise in educational psychology and student affairs, Mr. Wilson oversees student development and welfare programs.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="../images/academic-director.jpg" alt="Academic Director">
+                    <div class="member-info">
+                        <h3>Mrs. Emily Chen</h3>
+                        <p class="position">Academic Director</p>
+                        <p>A dedicated educator with a passion for innovation in teaching methodologies and curriculum design.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="../images/admin-officer.jpg" alt="Administrative Officer">
+                    <div class="member-info">
+                        <h3>Mr. Robert Brown</h3>
+                        <p class="position">Administrative Officer</p>
+                        <p>Responsible for the smooth functioning of school operations, facilities management, and administrative systems.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="call-to-action">
+        <div class="container">
+            <h2>Join THE YES SCHOOLING SYSTEM Family</h2>
+            <p>Take the first step towards providing your child with quality education and a bright future.</p>
+            <a href="contact.html" class="btn primary-btn">Contact Us Today</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>THE YES SCHOOLING SYSTEM</h3>
+                <p>Empowering young minds to achieve excellence through quality education since 2010.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="academics.html">Academics</a></li>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="faculty.html">Faculty</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Information</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Education Street, Knowledge City</p>
+                <p><i class="fas fa-phone"></i> +123 456 7890</p>
+                <p><i class="fas fa-envelope"></i> info@yesschool.edu</p>
+            </div>
+            <div class="footer-column">
+                <h3>School Hours</h3>
+                <p><strong>Monday - Friday:</strong> 8:00 AM - 3:30 PM</p>
+                <p><strong>Saturday:</strong> 8:00 AM - 12:30 PM</p>
+                <p><strong>Sunday:</strong> Closed</p>
+                <p><strong>Office Hours:</strong> 9:00 AM - 4:00 PM (Weekdays)</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 THE YES SCHOOLING SYSTEM. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
